@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+:root {
+  --Blue: hsl(223, 87%, 63%);
+  --Light-Red: hsl(354, 100%, 66%);
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
+  --Gray: hsl(0, 0%, 59%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+}
+.container {
+  margin: 30px auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {
+  width: 60px;
+  margin-bottom: 30px;
+  transform: translatey(-100%);
+  animation: comleft 0.7s ease forwards;
+}
+@keyframes comleft {
+  to {
+    transform: translateX(0);
+  }
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 100;
+  color: var(--Gray);
+  margin-bottom: 11px;
+}
+h1 span {
+  color: var(--Very-Dark-Blue);
+  font-weight: bold;
+}
+.Subscribe {
+  font-size: 14px;
+  font-weight: 600;
+  color: hsl(209deg 33% 12% / 75%);
+  margin-bottom: 25px;
+}
+#email {
+  height: 38px;
+  border: 1px solid var(--Gray);
+  border-radius: 30px;
+  padding: 0 82px 0px 20px;
+  background: none;
+}
+#email:focus {
+  border: 1px solid var(--Light-Red);
+  border-width: 1px;
+  outline: none;
+}
+button {
+  width: 115px;
+  height: 38px;
+  border: none;
+  background: var(--Blue);
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+button:hover {
+  box-shadow: 1px 1px 10px hsl(223deg 87% 63% / 66%);
+}
+.from p {
+  font-size: 9px;
+  font-weight: bold;
+  color: var(--Light-Red);
+}
+
+.abdo {
+  width: 440px;
+  margin-top: 50px;
+}
+.icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  background-color: #fff;
+  box-shadow: 0px 0px 2px hsl(209deg 33% 12% / 57%);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  transition: 0.7s;
+}
+.icons i {
+  color: var(--Blue);
+  font-size: 20px;
+}
+.icons a:hover i {
+  color: white;
+}
+.icons a:hover {
+  background-color: var(--Blue);
+}
+.icons {
+  margin-top: 50px;
+}
+.cop {
+  margin-top: 22px;
+  font-size: 14px;
+  color: var(--Gray);
+}
+#one,
+#two {
+  display: none;
+}
+
+@media (max-width: 500px){
+    .from{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    #submit{
+        width: 100%;
+    }
+    .abdo{
+        width: 100%;
+    }
+}
+@media (max-width: 300px){
+    #email{
+        width: 100%;
+        font-size: 10px;
+    }
+    .container{
+        text-align: center;
+    }
+}
